@@ -1,0 +1,149 @@
+.modal{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 300ms ease-out, opacity 300ms ease-out;
+    z-index: 1000;
+
+}
+.modal.active{
+        visibility: visible;
+        opacity: 1;
+}
+.modal .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.modal-content{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: #F4F1DE;
+    border-radius: 16px;
+    margin: 15% auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    align-items: flex-start;
+}
+.img{
+    flex-basis: 30%;
+    padding: 47px;
+}
+.img img{
+    border-radius: 8px;
+}
+.tit-name{
+    justify-content: flex-start;
+}
+.tit-name h1{
+    font-family: 'Playfair Display', serif;
+    color: #3D405B;
+    font-style: normal;
+    font-size: 34px;
+    font-weight: 900;
+    padding-top:  20px;
+    align-items: flex-start;
+
+}
+.tit-name h2{
+    color: #81B29A;
+    font-size:18px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    line-height: 25px;
+    font-weight: normal;
+
+}
+.gen-rac{
+    display: flex; 
+}
+.gen-rac p{
+    color:#3D405B;
+    margin-right: 30px;
+    font-weight: 600;
+}
+.gen-rac span{
+    font-weight: normal;
+}
+.skills{
+    width: 100%;
+    max-width: 180px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.skills p{
+    font-family: Open Sans;
+    color: #3D405B;
+    margin-bottom: 5px;
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 18px;
+    font-weight: 600;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    place-items: center left;
+}
+.skills h2{
+    font-family: 'Playfair Display', serif;
+    color:#81B29A;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top:20px;
+    margin-bottom: 16px;
+}
+.skills p .dados{
+    max-width: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #3D405B;
+    color:#F4F1DE;
+    border-radius: 100%;
+    text-align: center;
+    padding:5px;
+    line-height: 19px;
+    margin-left: 5px;
+    display: grid;
+    place-items: center;
+}
+@media(max-width: 500px){
+    .modal-content{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+@media(max-width: 320px){
+    .modal-content{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+}

@@ -1,0 +1,48 @@
+
+.layoutcard{
+    position: relative;
+    background-color: #FFFFFF; 
+    margin-right: 27px;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 206px;
+    overflow: hidden; /*esconde tudo que passar do tamanho*/
+    border-radius: 8px;
+}
+
+.layoutcard img{
+    width: 100%;
+    height: auto;
+    transition: transform 300ms ease-out; /*realizar a animação para fora*/
+}
+
+.layoutcard:hover figure img{
+    transform: scale(1.1); /*escala para aumentar mas nao ultrapassa o layout*/
+}
+.layoutcard figure{
+    position: relative;
+    overflow: hidden;
+}
+
+.layoutcard h3{
+    width: 100%;
+    background-color: #FFFFFF;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    text-align: center;
+    padding: 8px;
+    color: #3D405B;
+    font-style: normal;
+    font-size: 16px;
+    z-index: 2;
+}
+@media(max-width: 552px){
+    .layoutcard{
+        width: 250px;
+        height: auto;
+        margin-inline: auto;
+    }
+
+}
+
